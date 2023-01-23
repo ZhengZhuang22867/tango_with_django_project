@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+{% load staticfiles %} <!-- New line -->
+
+<html>
+	<head>
+		<title>About</title>
+	</head>
+
+	<body>
+		<h1>About says ... </h1>
+		<div>
+			here is the about page <br />
+			This tutorial has been put together by Zheng Zhuang!<br />
+		</div>
+		<div>
+			<a href="/rango/index/"> A link to the index page.</a><br />
+			<img src="{% static 'images/about.jpg' %}" alt="Picture of About" />
+			<img src="{{ MEDIA_URL }}cat.jpg" alt="Picture of About" />
+		</div>
+	</body>
+</html>
