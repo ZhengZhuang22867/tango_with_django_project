@@ -37,7 +37,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
+    'django.contrib.admin', #书5.6章介绍的系统预装的admin应用
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -83,8 +83,8 @@ WSGI_APPLICATION = 'tango_with_django_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.sqlite3',# 轻量级数据库sqlite引擎
+        'NAME': BASE_DIR / 'db.sqlite3',# 数据库文件路径，默认为根目录中的db.sqlite3
     }
 }
 
