@@ -9,5 +9,6 @@ class PageAdmin(admin.ModelAdmin):
 class CategoryAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug':('name',)}
 
+# register函数是和上面对应的部分配合使用的
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Page, PageAdmin)

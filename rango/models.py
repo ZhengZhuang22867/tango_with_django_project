@@ -4,7 +4,8 @@ from django.template.defaultfilters import slugify
 
 
 class Category(models.Model):
-    name = models.CharField(max_length=128, unique=True)
+    Name_MAX_LENGTH = 128 # 书第7章课后练习中要求加入该变量
+    name = models.CharField(max_length=Name_MAX_LENGTH, unique=True)
     views = models.IntegerField(default=0)
     likes = models.IntegerField(default=0)
     # 书6.3章中加入，使得分类的别名无法重复，对别名为空的分类会有影响
@@ -21,8 +22,9 @@ class Category(models.Model):
         return self.name
 
 class Page(models.Model):
+    TITLE_MAX_LENGTH = 128 # 书第7章课后练习中要求加入该变量
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
-    title = models.CharField(max_length=128)
+    title = models.CharField(max_length=TITLE_MAX_LENGTH)
     url = models.URLField()
     views = models.IntegerField(default=0)
 
