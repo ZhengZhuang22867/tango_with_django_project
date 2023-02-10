@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rango',
+    'rango', # 最一开始时加入
+    'teacherChat',
 ]
 
 MIDDLEWARE = [

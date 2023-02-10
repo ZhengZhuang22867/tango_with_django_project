@@ -1,0 +1,22 @@
+<!-- goods_list.html -->
+<h1>Goods List</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for goods in goods %}
+        <tr>
+            <td>{{ goods.name }}</td>
+            <td>{{ goods.category }}</td>
+            <td>{{ goods.price }}</td>
+            <td>{{ goods.description }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

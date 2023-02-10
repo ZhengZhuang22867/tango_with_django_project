@@ -23,6 +23,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('', views.index, name = 'index'),
     path('rango/', include('rango.urls')), #将以rango/开头的url交给rango应用处理
+    path('teacherChat/', include('teacherChat.urls')),
     path('admin/', admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
